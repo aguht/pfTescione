@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { updateAlumnosFeatures } from '../../store/alumnos-feature.actions';
@@ -12,10 +12,10 @@ import { selectAlumnoByIdSuccess } from '../../store/alumnos-feature.selectors';
 })
 export class AlumnosEditComponent implements OnInit {
 
-  alumnoForm:FormGroup;
+  alumnoForm:UntypedFormGroup;
   alumnoToEdit:any=[];
 
-  constructor(private fb: FormBuilder, private store: Store, private router:Router) { }
+  constructor(private fb: UntypedFormBuilder, private store: Store, private router:Router) { }
 
   ngOnInit(): void {
     this.alumnoForm=this.fb.group({

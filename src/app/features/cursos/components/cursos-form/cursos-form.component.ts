@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { postCursosFeatures } from '../../store/cursos-feature.actions';
@@ -11,10 +11,10 @@ import { postCursosFeatures } from '../../store/cursos-feature.actions';
 })
 export class CursosFormComponent implements OnInit {
 
-  cursoForm:FormGroup;
+  cursoForm:UntypedFormGroup;
   cursoToEdit:any=[];
 
-  constructor(private fb: FormBuilder, private store: Store, private router:Router) { }
+  constructor(private fb: UntypedFormBuilder, private store: Store, private router:Router) { }
 
   ngOnInit(): void {
     this.cursoForm=this.fb.group({

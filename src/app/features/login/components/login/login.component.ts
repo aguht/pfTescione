@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder,FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder,UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Usuarios } from 'src/app/shared/interfaces/usuarios';
@@ -14,12 +14,12 @@ import { cargarSesion, loginAction } from '../../store/login-feature.actions';
 })
 export class LoginComponent {
 
-  loginForm: FormGroup;
+  loginForm: UntypedFormGroup;
 
-  constructor(public fb: FormBuilder, private authService: AuthService, private ruta: Router, private store: Store) {
+  constructor(public fb: UntypedFormBuilder, private authService: AuthService, private ruta: Router, private store: Store) {
       this.loginForm = fb.group({
-      user: new FormControl('', [Validators.required]),
-      pass: new FormControl('', [Validators.required]),
+      user: new UntypedFormControl('', [Validators.required]),
+      pass: new UntypedFormControl('', [Validators.required]),
     });
   }
 
