@@ -9,6 +9,7 @@ import { MaterialModule } from './shared/material.module';
 import { EffectsModule } from '@ngrx/effects';
 import { FeaturesModule } from './features/features.module';
 import { HttpClientModule } from '@angular/common/http';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     FeaturesModule,
     MaterialModule,
     StoreModule.forRoot({}, {}),
-    EffectsModule.forRoot([])
+    EffectsModule.forRoot([]),
+    NoopAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
