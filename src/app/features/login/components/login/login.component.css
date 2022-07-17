@@ -1,0 +1,32 @@
+.signin-content {
+  padding: 1rem;
+}
+
+.full-width-input {
+  width: 100%;
+}
+
+h2 {
+  margin: 20px 0 0 0;
+  text-align: center;
+}
+
+h3 {
+  margin: -8px;
+  text-align: center;
+}
+
+mat-card {
+  text-align: center;
+  max-width: 400px;
+  margin: 2em auto;
+}
+
+mat-divider {
+  background-color: rgba(149, 194, 0, 0.805);
+  margin-bottom: 16px;
+  margin-top: 16px;
+}
+
+
+  

@@ -1,0 +1,34 @@
+<mat-card>
+<div class="form">
+    <form [formGroup]="cursoForm" (ngSubmit)="submit()">
+        
+        <div>
+          <mat-form-field appearance="fill">
+              <mat-label>Curso</mat-label>
+              <input formControlName="nombre" matInput>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field appearance="fill">
+            <mat-label>Profesor</mat-label>
+            <input formControlName="profesor" matInput>
+          </mat-form-field>
+        </div>
+        <div>
+        <mat-form-field appearance="fill">
+             <mat-label>Cantidad de horas</mat-label>
+             <input formControlName="horas" matInput>
+           </mat-form-field>
+        </div>
+        <div>
+        <mat-form-field appearance="fill">
+            <mat-label>Descripcion</mat-label>
+            <input formControlName="info" matInput>
+          </mat-form-field>
+        </div>
+        
+        <button type="submit">Submit</button>
+
+    </form>
+    </div>
+  </mat-card>

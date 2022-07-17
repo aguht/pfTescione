@@ -1,0 +1,61 @@
+<button mat-raised-button color="primary" routerLink="/usuarios/form">+ Añadir nuevo usuario  </button>
+<table #table mat-table [dataSource]="usuarioss" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="usuario">
+      <th mat-header-cell *matHeaderCellDef> Usuario </th>
+      <td mat-cell *matCellDef="let element">
+      {{element.user}} </td> 
+    </ng-container>
+
+    <ng-container matColumnDef="nombre">
+      <th mat-header-cell *matHeaderCellDef appTitulos> Nombre </th>
+      <td mat-cell *matCellDef="let element">
+      {{element.nombre}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="rol">
+      <th mat-header-cell *matHeaderCellDef> rol </th>
+      <td mat-cell *matCellDef="let element">
+      {{element.rol}} </td>
+    </ng-container>
+      
+    <ng-container matColumnDef="edit">
+      <th mat-header-cell *matHeaderCellDef> 
+      </th>
+      <td mat-cell *matCellDef="let element">
+        <div (click)="getUsuarioDetails(element)" routerLink="/usuarios/edit">
+          <span class="material-icons">
+              edit
+          </span>
+      </div>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="info">
+      <th mat-header-cell *matHeaderCellDef> 
+      </th>
+      <td mat-cell *matCellDef="let element" >
+        <div (click)="getUsuarioDetails(element)" routerLink="/usuarios/info">
+          <span class="material-icons">
+              info
+          </span>
+      </div>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="delete">
+        <th mat-header-cell *matHeaderCellDef> 
+        </th>
+        <td mat-cell *matCellDef="let element" >
+          <div (click)="deleteElement(element)">
+            <span class="material-icons">
+                delete
+            </span>
+        </div>
+        </td>
+      </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    
+  </table>

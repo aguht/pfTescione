@@ -1,0 +1,40 @@
+<mat-card>
+<div class="form">
+    <form [formGroup]="usuarioForm" (ngSubmit)="submit()">
+        
+        <div>
+          <mat-form-field appearance="fill">
+              <mat-label>Usuario</mat-label>
+              <input formControlName="user" matInput>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field appearance="fill">
+            <mat-label>Contraseña</mat-label>
+            <input formControlName="pass" matInput>
+          </mat-form-field>
+        </div>
+        <div>
+        <mat-form-field appearance="fill">
+             <mat-label>Nombre</mat-label>
+             <input formControlName="nombre" matInput>
+           </mat-form-field>
+        </div>
+        <div>
+        <mat-form-field appearance="fill">
+            <mat-label>E-mail</mat-label>
+            <input formControlName="email" matInput>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field appearance="fill">
+              <mat-label>Rol</mat-label>
+              <input formControlName="rol" matInput>
+          </mat-form-field>
+        </div>
+        
+        <button type="submit">Submit</button>
+
+    </form>
+    </div>
+  </mat-card>

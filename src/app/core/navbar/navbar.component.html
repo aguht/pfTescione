@@ -1,0 +1,18 @@
+<header class="p-3 bg-dark text-white" *ngIf="authService.isAuthenticated | async; else noConnect">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <span>
+      <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/2/25/Google_Classroom_icon.svg"/>
+      <span class="tex">CLASS MANAGER</span>
+      </span>
+
+       <h1 class="tex">Usuario: {{ usuarioActivo.user }}</h1> 
+          
+       <button type="button" class="btn btn-warning" (click)="cerrarSesion()">Logout</button> 
+      </div>
+      
+    </div>
+</header>
+<ng-template #noConnect>
+  <h3>Iniciar sesión para usar la app</h3>
+</ng-template>
