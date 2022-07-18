@@ -110,7 +110,7 @@
       }
     }
   },
-  "defaultProject": "final",
+ 
   "cli": {
     "schematicCollections": [
       "@ngrx/schematics"

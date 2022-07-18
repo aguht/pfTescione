@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
-import { FrontComponent } from './core/front/front.component';
 import { NoPageFoundComponent } from './core/no-page-found/no-page-found.component';
 import { AlumnosModule } from './features/alumnos/alumnos.module';
 import { CursosModule } from './features/cursos/cursos.module';
