@@ -6,6 +6,7 @@ import { NoPageFoundComponent } from './core/no-page-found/no-page-found.compone
 import { AlumnosModule } from './features/alumnos/alumnos.module';
 import { CursosModule } from './features/cursos/cursos.module';
 import { InscripcionesModule } from './features/inscripciones/inscripciones.module';
+import { LoginComponent } from './features/login/components/login/login.component';
 import { LoginModule } from './features/login/login.module';
 import { UsuariosModule } from './features/usuarios/usuarios.module';
 import { AdminGuard } from './shared/guards/admin.guard';
@@ -17,7 +18,7 @@ const routes: Routes = [
   {path:'inscripciones', loadChildren:()=>import('./features/inscripciones/inscripciones.module').then(m=>InscripcionesModule), canActivate:[LoginGuard]},
   {path:'login', loadChildren:()=>import('./features/login/login.module').then(m=>LoginModule), pathMatch: 'full'},
   {path:'usuarios', loadChildren:()=>import('./features/usuarios/usuarios.module').then(m=>UsuariosModule), canActivate:[LoginGuard, AdminGuard]},
-  {path:'', component: FrontComponent, pathMatch:'full', canActivate:[LoginGuard]},
+  {path:'', component: LoginComponent, pathMatch:'full', canActivate:[LoginGuard]},
   {path:'**', component: NoPageFoundComponent}
 ];
 
